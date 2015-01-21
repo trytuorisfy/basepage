@@ -11,7 +11,7 @@ tips:切换分支
 ###base-pc
 fis + jquery
 ###base-mobile
-fis + mobile
+fis + zepto
 ###fis-handlerbars
 fis + [handlerbars}(http://handlebarsjs.com/) +jquery
 已包含ajax
