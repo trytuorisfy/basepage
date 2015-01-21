@@ -1,0 +1,26 @@
+{
+    "error":0,
+    "data":{
+        "list":[
+            {
+                "tit":"我是图片一",
+                "url":"http://tuorisfy.qiniudn.com/jianshu/html/images/1.jpg"
+            },
+            {
+                "tit":"我是图片二",
+                "url":"http://tuorisfy.qiniudn.com/jianshu/html/images/2.jpg"
+            },
+            {
+                "tit":"我是图片三",
+                "url":"http://tuorisfy.qiniudn.com/jianshu/html/images/3.jpg"
+            },
+            {
+                "tit":"我是图片四",
+                "url":"http://tuorisfy.qiniudn.com/jianshu/html/images/4.jpg"
+            }                       
+        ],
+        "info":{
+            "test":"nmx"
+        }
+    }
+}

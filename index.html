@@ -1,0 +1,49 @@
+<link rel="import" href="tpl/header.html?__inline">
+    <title></title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/css.css">
+    <style>
+        .pic-wrap{
+            float: left;
+            margin-right: 20px;
+            text-align: center;
+            border: 2px solid orange;
+            margin-bottom: 20px;
+        }
+    </style>
+  </head>
+  <body>
+    <div id="pics"></div>
+
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <!--<script src="js/zepto.min.js"></script>-->
+    <script src="js/template.js"></script>
+    
+    <script id="pic-tpl" type="text/html">
+        {{if error == 0}}
+            {{each list as value i}}
+     
+                    <div class='pic-wrap'>
+                        <img src="{{value.url}}" title="{{value.tit}}" alt="{{value.tit}}" /> 
+                        <p>{{value.tit}}</p>  
+                    </div>
+
+
+            {{/each}}
+        {{/if}}
+    </script>
+
+    <script type="text/javascript">
+      $(function(){
+        $.getJSON('datas.json', function(data)
+            {
+                var html = template('pic-tpl', {
+                    error:data.error,
+                    list: data.data.list//直接定位到要的那部分！
+                });
+                $('#pics').html(html);
+            }
+        );
+      });
+    </script>
+<link rel="import" href="tpl/footer.html?__inline"> 
