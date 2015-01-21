@@ -25,3 +25,20 @@ tips:切换分支
 
 ##arttpl分支
 * fis + [ArtTemplate](https://github.com/aui/artTemplate) + jquery/zepto(已包含ajax)
+
+
+###注意事项：
+* 把需要的合并的css，js放在正文的html中，比如index.html，而不要放在会插入其中的html中，比如header.html，否则会无法合并。
+* 如果合并后发现还多css，那是因为开启了less插件，把less插件关掉，css直接用[koala](http://koala-app.com/index-zh.html)生成就好了。不会用的看我的简易教程[看这里！](http://trytuorisfy.github.io/freezy/koala_course.html)
+
+###代码运行简介如下：
+
+
+    fis server start
+	fis release -wL
+	fis release -opD -d ./output 
+    
+    //不用了可以将服务器清除和关闭
+    fis server clean
+    fis server stop
+
